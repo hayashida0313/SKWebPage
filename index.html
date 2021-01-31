@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="http://kaf-u.kamitsubaki.jp/のようなWebページを作成したい">
+        <meta name="description" content="Kawataki Web Art Gallery">
         <meta name="keywords" content="Web,Design">
         <meta name="author" content="Kenji Hayashida">
         <title>Kawataki</title>
@@ -24,11 +24,39 @@
             </nav> -->
         </header>
 
+        <!-- ローディング画面 -->
+        <div id="loading" class="loading active">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- コンテンツ部分 -->
         <div id="main">
             <div id="person">
-                <img class="hachiman" src="img/3_hachiman.png" alt="">
-                <img class="yui" src="img/2_yui.png" alt="">
-                <img class="yukino" src="img/1_yukino.png" alt="">
+                <img id="hachiman" class="hachiman" src="img/3_hachiman.png" alt="">
+                <img id="yui" class="yui" src="img/2_yui.png" alt="">
+                <img id="yukino" class="yukino" src="img/1_yukino.png" alt="">
+            </div>
+
+            <div id="sns">
+                <ul>
+                    <li><a href="#"><img class="icon" src="img/icon_twitter.png" alt=""></a></li>
+                    <li><a href="#"><img class="icon" src="img/icon_insta.png" alt=""></a></li>
+                    <li><a href="#"><img class="icon" src="img/icon_pixive.png" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div id="youtube">
+                <iframe width="740" height="415" src="https://www.youtube.com/embed/cRanaA9S2RM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div id="description">
+                <img src="img/sample.png" alt="適当な画像">
+                <div id="para">
+                    <p>
+                        The Patron page is my chance to create more content just fot you.<br>
+                        my chance to have more time to communicate with you and share everything I can with you
+                    </p>    
+                </div>
             </div>
         </div>
     </body>

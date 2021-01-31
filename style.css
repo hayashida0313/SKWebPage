@@ -1,44 +1,48 @@
-/* header {
-  width: 100%;
-  height: auto;
+@charset "utf-8";
+
+/* ローディング部 */
+.loading{
   position: fixed;
   top: 0;
   left: 0;
-}
-
-nav {
+  z-index: 9999;
   width: 100%;
-  height: 15px;
-  padding: 15px;
-  text-align: right;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.loading.active{
+  opacity: 1;
+  visibility: visible;
+}
+.spinner {
+  width: 300px;
+  height: 300px;
+  margin: 200px auto;
+  background-color: #FFCC33;
+  border-radius: 100%;
+  animation: loading_animation 1.0s infinite ease-in-out;
+}
+@keyframes loading_animation{
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
 }
 
-nav ul{
-  float: right;
-  margin-right: 80px;
-}
-
-nav ul li{
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: #FFF;
-  list-style: none;
-}
-
-nav ul li a{
-  color: #FF9933;
-}
-
-img.icon{
-  width: 20px;
-  height: 20px;
-  margin-top: -3px;
-} */
-
+/* コンテンツ部 */
 body{
   background-image: url("img/title.png"), url("img/background.png");
-  background-repeat: no-repeat, repeat-x;
+  background-repeat: no-repeat, repeat;
 }
 
 div#main{
@@ -47,44 +51,98 @@ div#main{
   margin-top: 100px;
 }
 
-img.hachiman{
+div#person{
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.hachiman{
   width: 50%;
   height: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
   margin: auto;
-  animation:show 1s both;
+  opacity: 0;
+}
+.hachiman.show{
+  opacity: 1;
+  animation-name: show;
+  animation-duration: 1s;
 }
 
-img.yukino{
-  width: 40%;
-  height: auto;
-  position: absolute;
-  top: 225px;
-  right: 140px;
-  animation:show 2s both;
-}
-
-img.yui{
+.yui{
   width: 50%;
   height: auto;
   position: absolute;
   top: 50px;
-  left: 40px;
-  animation:show 3s both;
+  right: 45%;
+  opacity: 0;
+}
+.yui.show{
+  opacity: 1;
+  animation-name: show;
+  animation-duration: 1s;
 }
 
-.hachiman {animation-delay:1s;}
-.yukino {animation-delay:2s;}
-.yui {animation-delay:3s;}
+.yukino{
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 15em;
+  left: 45%;
+  opacity: 0;
+}
+.yukino.show{
+  opacity: 1;
+  animation-name: show;
+  animation-duration: 1s;
+}
+
 @keyframes show {
 	0% {
-		transform:translate(0,2em);
 		opacity:0;
 	}
 	100% {
-		transform:translate(0,0);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 		opacity:1;
 	}
+}
+
+/* アイコン部 */
+div#sns ul{
+  text-align: center;
+}
+
+div#sns ul li{
+  display: inline-block;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Youtube */
+div#youtube {
+  margin-top: 80px;
+  text-align: center;
+}
+
+/* 概要 */
+div#description {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+div#description img {
+  width: 700px;
+  height: 300px;
+}
+
+div#description p {
+  display: inline-block;
+  padding: 20px 20px 20px 60px;
+  width: 700px;
+  height: auto;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
