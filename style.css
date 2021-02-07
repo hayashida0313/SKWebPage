@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+/* タイトルアイコン */
+div#logo img {
+  position: absolute;
+  top: 0;
+  width: 65%;
+  z-index: -1;
+}
+
 /* ローディング部 */
 .loading{
   position: fixed;
@@ -39,10 +47,52 @@
   }
 }
 
+/* .loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+.loading.active{
+  opacity: 1;
+  visibility: visible;
+}
+.applelogo{
+  position: relative;
+  color: #7a7157;
+  font-size: 10em;
+  text-shadow: 0 0 50px #7a7157,
+                0 0 100px #FFCC33,
+                0 0 150px #FFCC33,
+                0 0 200px #FFCC33,
+                0 0 250px #FFCC33;
+  animation: loading_animation 3s linear infinite;
+}
+@keyframes loading_animation{
+  0% {
+    filter: hue-rotate(0deg);
+  } 100% {
+    filter: hue-rotate(360deg);
+  }
+}  */
+
+
+
 /* コンテンツ部 */
 body{
-  background-image: url("img/title.png"), url("img/background.png");
-  background-repeat: no-repeat, repeat;
+  background-image: url("img/background.png");
+  background-repeat: repeat;
+  font-family: 'Helvetica Neue', "Arial", sans-serif;
+  line-height: 1.8em;
 }
 
 div#main{
@@ -108,41 +158,80 @@ div#person{
 	}
 }
 
+/* 説明 */
+.description {
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+
 /* アイコン部 */
-div#sns ul{
+.sns ul{
   text-align: center;
 }
 
-div#sns ul li{
+.sns ul li{
   display: inline-block;
   padding: 20px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
+.sns ul li a figure img {
+  transition: .3s ease-in-out;
+}
+.sns ul li a figure:hover img {
+  opacity: .8;
+  transform:rotate(-3deg) scale(1.1);
+}
+
 /* Youtube */
 div#youtube {
-  margin-top: 80px;
   text-align: center;
+  padding: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 /* 概要 */
-div#description {
-  margin-top: 80px;
-  margin-bottom: 80px;
+div#contents {
+  width: 600px;
+  display: inline-block;
+  padding: 20px 0 20px 0;
+  border-top: 2px solid #F2F2F2;
+  margin: 20px 0 20px 0;
   text-align: center;
 }
 
-div#description img {
-  width: 700px;
-  height: 300px;
+div#contents div.posts {
+  width: 600px;
+  display: inline-block;
+  border-bottom: 2px solid #F2F2F2;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-div#description p {
+div#contents img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+div#contents p {
   display: inline-block;
-  padding: 20px 20px 20px 60px;
-  width: 700px;
+  width: 100%;
   height: auto;
   text-align: left;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
 }
+
+/* フッター */
+footer {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p#pagetop{
+  padding: 10px;
+}
+

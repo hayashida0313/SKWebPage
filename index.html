@@ -8,11 +8,15 @@
         <title>Kawataki</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
         <link rel="stylesheet" media="all" href="style.css" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <script src="scripts.js" defer></script>
     </head>
 
     <body>
         <header>
+            <div id="logo">
+                <img src="img/title.png" alt="">
+            </div>
             <!-- <nav>
                 <ul class="follow-me">
                     <li><a href="#">TOP</a></li>
@@ -26,6 +30,7 @@
 
         <!-- ローディング画面 -->
         <div id="loading" class="loading active">
+            <!-- <i class="fa fa-apple applelogo" aria-hidden="true"></i> -->
             <div class="spinner"></div>
         </div>
 
@@ -37,11 +42,17 @@
                 <img id="yukino" class="yukino" src="img/1_yukino.png" alt="">
             </div>
 
-            <div id="sns">
+            <div class="description">
+                <p>
+                    this is my illustration page.
+                </p>
+            </div>
+
+            <div class="sns">
                 <ul>
-                    <li><a href="#"><img class="icon" src="img/icon_twitter.png" alt=""></a></li>
-                    <li><a href="#"><img class="icon" src="img/icon_insta.png" alt=""></a></li>
-                    <li><a href="#"><img class="icon" src="img/icon_pixive.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/morefun_cool"><figure><img class="icon" src="img/icon_twitter.png" alt=""></figure></a></li>
+                    <li><a href="#"><figure><img class="icon" src="img/icon_insta.png" alt=""></figure></a></li>
+                    <li><a href="https://www.pixiv.net/artworks/87435509"><figure><img class="icon" src="img/icon_pixive.png" alt=""></figure></a></li>
                 </ul>
             </div>
 
@@ -49,15 +60,42 @@
                 <iframe width="740" height="415" src="https://www.youtube.com/embed/cRanaA9S2RM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div id="description">
-                <img src="img/sample.png" alt="適当な画像">
-                <div id="para">
-                    <p>
-                        The Patron page is my chance to create more content just fot you.<br>
-                        my chance to have more time to communicate with you and share everything I can with you
-                    </p>    
+            <div id="contents">
+                <div class="posts">
+                    <div class="media">
+                        <a href="#">
+                            <img src="img/hachiman_2.jpg" alt="hachiman 2021">
+                        </a>
+                    </div>
+                    <div class="mediaCaption">
+                        <p>
+                            hachiman, 2021
+                        </p>    
+                    </div>
+                </div>
+
+                <div class="posts">
+                    <div class="media">
+                        <a href="#">
+                            <img src="img/iroha.jpg" alt="iroha 2021">
+                        </a>
+                    </div>
+                    <div class="mediaCaption">
+                        <p>
+                            iroha, 2021
+                        </p>    
+                    </div>    
                 </div>
             </div>
         </div>
+
+        <footer>
+            <p id="pagetop">
+                <a href="#">Page Top</a>
+            </p>
+            <p>
+                @2021- Kawataki -
+            </p>
+        </footer>
     </body>
 </html>
