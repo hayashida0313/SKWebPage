@@ -161,7 +161,7 @@ div#person{
 .hachiman.show{
   opacity: 1;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 
 .yui{
@@ -175,7 +175,7 @@ div#person{
 .yui.show{
   opacity: 1;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 
 .yukino{
@@ -189,20 +189,20 @@ div#person{
 .yukino.show{
   opacity: 1;
   animation-name: show;
-  animation-duration: 0.4s;
+  animation-duration: 1s;
 }
 
 @keyframes show {
-  0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
+  /* 0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
   4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);}
-  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
-	/* 0% {
+  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);} */
+	0% {
 		opacity:0;
 	}
 	100% {
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 		opacity:1;
-	} */
+	}
 }
 
 /* 説明 */
